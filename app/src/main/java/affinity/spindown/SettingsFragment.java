@@ -1,15 +1,16 @@
 package affinity.spindown;
 
-import android.preference.PreferenceActivity;
-import android.preference.PreferenceFragment;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.preference.PreferenceFragment;
 
+/**
+ * Created by aaron on 6/22/2016.
+ */
 public class SettingsFragment extends PreferenceFragment {
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.preferences);
     }
 }
+

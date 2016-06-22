@@ -43,7 +43,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 //        playerOneLayout = (RelativeLayout) findViewById(R.id.one_player);
-        getFragmentManager().beginTransaction()
+        //Our fragment manager needs to communicate with settingsfragment and fragments we have
+        // in our mainactivity. Use this.fragmentManager{...}
+        this.fragmentManager.beginTransaction()
                 .replace(android.R.id.content, new SettingsFragment())
                 .commit();
     }
