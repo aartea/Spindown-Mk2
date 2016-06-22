@@ -8,4 +8,9 @@
         spindown:actionViewClass="android.widget.Spinner"
         android:title="Players"/>
 
+    <item
+        android:id="@+id/settings"
+        spindown:showAsAction="collapseActionView"
+        android:title="Settings"/>
+
 </menu>

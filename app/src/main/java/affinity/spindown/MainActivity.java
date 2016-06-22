@@ -43,6 +43,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 //        playerOneLayout = (RelativeLayout) findViewById(R.id.one_player);
+        getFragmentManager().beginTransaction()
+                .replace(android.R.id.content, new SettingsFragment())
+                .commit();
     }
 
     //Create our  menu
@@ -51,6 +54,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         //Inflate our spinner
         getMenuInflater().inflate(R.menu.menu_layout, menu);
         MenuItem item = menu.findItem(R.id.spinner);
+
 
         mSpinner = (Spinner) MenuItemCompat.getActionView(item);
         mSpinnerAdapter = ArrayAdapter.createFromResource(this,
